@@ -1,0 +1,18 @@
+var hamburger_1 = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_CHEESE);
+var hamburger_2 = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_SALAD);
+var olivie = new Salad(Salad.OLIVIE, 200);
+var cola = new Drink(Drink.COLA);
+var order1 = new Order(hamburger_2, olivie, cola);
+console.log(order1.getItems());
+order1.calculateTotalCalories();
+order1.calculateTotalPrice();
+order1.addPosition(hamburger_1);
+console.log(order1.getItems());
+order1.calculateTotalCalories();
+order1.calculateTotalPrice();
+order1.removePosition(hamburger_2);
+console.log(order1.getItems());
+order1.calculateTotalCalories();
+order1.calculateTotalPrice();
+order1.payForTheOrder();
+order1.addPosition(hamburger_2);
